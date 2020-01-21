@@ -1,5 +1,7 @@
 theme: jekyll-theme-midnight
-baseurl: /queue_bit.github.io
+baseurl: /
+url: "https://queue-bit.github.io"
+
 defaults:
   -
     scope: 
