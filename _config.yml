@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-midnight
 baseurl: /queue_bit.github.io
 defaults:
   -
