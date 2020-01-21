@@ -1,5 +1,5 @@
 theme: jekyll-theme-hacker
-baseurl: /blog
+baseurl: /queue_bit.github.io
 defaults:
   -
     scope: 
