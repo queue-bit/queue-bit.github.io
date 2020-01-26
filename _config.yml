@@ -1,6 +1,5 @@
 theme: jekyll-theme-midnight
 baseurl: /
-posturl: /posts
 url: "https://queue-bit.github.io"
 
 defaults:
