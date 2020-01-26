@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Some git notes"
 ---
 
-# Welcome
+# Git Notes
 
 **Hello world**, this is my first Jekyll blog post.
 
