@@ -1,4 +1,4 @@
-remote_theme: broccolini/swiss
+theme: jekyll-theme-slate
 baseurl: /
 url: "https://queue-bit.github.io"
 
@@ -8,5 +8,3 @@ defaults:
       path: ""
     values:
       author: "Andreas Wiebe"
-
-theme: jekyll-theme-slate
