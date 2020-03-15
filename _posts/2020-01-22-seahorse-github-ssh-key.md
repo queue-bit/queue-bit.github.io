@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Linux Mint - Seahorse for GitHub SSH keys"
 ---
 # Create a new key in Seahorse (_Passwords and Keys_)
