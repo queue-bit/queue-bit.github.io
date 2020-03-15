@@ -8,3 +8,5 @@ defaults:
       path: ""
     values:
       author: "Andreas Wiebe"
+
+theme: jekyll-theme-slate
