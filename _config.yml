@@ -1,7 +1,6 @@
 theme: jekyll-theme-slate
 baseurl: /
 url: "https://queue-bit.github.io"
-project_tagline: "testing"
 
 defaults:
   -

@@ -1,10 +1,8 @@
 ---
 layout: default
-title:  "Some git notes"
+title:  "Here we go"
 ---
 
-# Git Notes
+# Here we go...
 
-**Hello world**, this is my first Jekyll blog post.
-
-I hope you like it!
+Hi all, setting up and configuring GitHub pages to keep some of my notes. More things to come in the future.
