@@ -12,7 +12,7 @@ From the manual:
 $ chsh -s {/path/to/shell} {username}
 ```
 
-## Examples:
+## Examples
 
 ### Change the shell for current (logged in) user
 
