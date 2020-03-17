@@ -2,9 +2,11 @@
 layout: default
 title:  "Linux Mint - Seahorse for GitHub SSH keys"
 ---
-# Create a new key in Seahorse (_Passwords and Keys_)
+# Linux Mint - Seahorse for GitHub SSH keys
 
-## In _Cinnamon_:
+## Create a new key in Seahorse (_Passwords and Keys_)
+
+### In _Cinnamon_:
 1. Open `Password and Keys`
 1. Click `+`
 1. Select `Secure Shell Key`
@@ -14,7 +16,7 @@ title:  "Linux Mint - Seahorse for GitHub SSH keys"
     - Set Key Strength to 4096
 1. Click `Just Create Key`
 
-## In a CLI:
+### In a CLI:
 1. Install xclip:
     ```bash
     sudo apt install xclip
@@ -24,7 +26,7 @@ title:  "Linux Mint - Seahorse for GitHub SSH keys"
     cat ~/.ssh/{keyname}.pub | xclip -i -sel clip
     ```
 
-## In GitHub:
+### In GitHub:
 1. Open [SSH and GPG keys (https://github.com/settings/keys)](https://github.com/settings/keys)
 1. Click `New SSH key`
 1. Enter a title
