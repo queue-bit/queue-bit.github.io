@@ -3,9 +3,9 @@ layout: default
 title:  "Ubuntu - Add System-Wide Environment Variables (incl. Mint/Pop!_OS)"
 ---
 
- # Ubuntu - Add System-Wide Environment Variables (incl. Mint/Pop!_OS)
+# Ubuntu - Add System-Wide Environment Variables (incl. Mint/Pop!_OS)
 
- I typically use profile.d for loading Environment Variables. There are other methods but I find this easier to maintain.
+I typically use profile.d for loading Environment Variables. There are other methods but I find this easier to maintain.
 
 1. Use `echo` to output the `export` command, then redirect (`>>`) the output to a file in the `profile.d` directory:
 
