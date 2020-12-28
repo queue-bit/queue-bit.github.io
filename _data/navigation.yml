@@ -1,0 +1,28 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+# sidebar navigation list sample
+sidebar:
+  - title: "My Notes"
+    children:
+      - title: "Debian"
+        url: /debian/
+      - title: "Gnome"
+        url: /gnome/
+      - title: "Hardware"
+        url: /hardware/
+      - title: "Linux"
+        url: /linux/
+      - title: "Raspberry Pi"
+        url: /rpi/        
+      - title: "Arduino"
+        url: /arduino/        
+      - title: "CentOS"
+        url: /centos/   
+  - title: "Other"
+    children:
+      - title: "Process Engineering"
+        url: /process-engineering/
+      - title: "Project Management"
+        url: /project-management/        

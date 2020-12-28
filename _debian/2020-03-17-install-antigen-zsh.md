@@ -1,17 +1,18 @@
 ---
-layout: default
-title:  "Linux Mint - Install Antigen for ZSH"
+title:  "Mint - Install Antigen for ZSH"
 ---
-
-# Linux Mint - Install Antigen for ZSH
 
 Seems the version of [zsh-antigen](https://github.com/zsh-users/antigen) that's included in _apt_ isn't up to date and can cause errors when opening a new session in Mint.
 
-1. If you've installed Antigen via apt, remove it:
+## Remove Antigen installed via apt
 
-    ```zsh
-    % sudo apt remove zsh-antigen
-    ```
+If you've installed Antigen via apt, remove it:
+
+```zsh
+% sudo apt remove zsh-antigen
+```
+
+## Download Antigen
 
 1. Create a directory:
 
@@ -26,6 +27,8 @@ Seems the version of [zsh-antigen](https://github.com/zsh-users/antigen) that's 
         ```bash
         % sudo curl -o /usr/share/zsh-antigen/antigen.zsh -sL git.io/antigen
         ```
+
+## Configure
 
 1. Edit `.zshrc` in your favorite text editor
     - Add the following near the top:
@@ -50,6 +53,7 @@ Seems the version of [zsh-antigen](https://github.com/zsh-users/antigen) that's 
         antigen apply
         ```
 
+## Finish it
 
 1. Restart the CLI sessions (close and open the terminal)
 

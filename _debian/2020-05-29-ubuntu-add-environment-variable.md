@@ -1,11 +1,12 @@
 ---
-layout: default
-title:  "Ubuntu - Add System-Wide Environment Variables (incl. Mint/Pop!_OS)"
+
+title:  "Ubuntu - Add System-Wide Environment Variables"
+
 ---
 
-# Ubuntu - Add System-Wide Environment Variables (incl. Mint/Pop!_OS)
-
 I typically use profile.d for loading Environment Variables. There are other methods but I find this easier to maintain.
+
+## Steps
 
 1. Use `echo` to output the `export` command, then redirect (`>>`) the output to a file in the `profile.d` directory:
 
@@ -43,7 +44,7 @@ I typically use profile.d for loading Environment Variables. There are other met
     ```
     - You'll get a reply of {your-variable-value}
 
-## Example:
+## Example
 
 In this example I create a new shell file in profile.d that exports an Environment Variable with the name `TEST_API_KEY` and value `mykeyishere`. I then make it executable, use `source` to load it, then `echo` it to make sure it's properly set.
 
