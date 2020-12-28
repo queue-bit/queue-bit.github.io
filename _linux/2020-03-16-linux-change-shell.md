@@ -1,6 +1,6 @@
 ---
-layout: default
 title:  "Linux - Change Default Shell"
+excerpt: "bash, zsh, sh, oh my!"
 ---
 # Linux - Change Default Shell
 
@@ -29,6 +29,8 @@ $ Password: _
 $ sudo chsh -s /bin/zsh hsimpson
 $ _
 ```
+
+Where _hsimpson_ is the user ID.
 
 ### Check available shells
 ```bash
