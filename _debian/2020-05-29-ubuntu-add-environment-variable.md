@@ -1,7 +1,8 @@
 ---
 
 title:  "Ubuntu - Add System-Wide Environment Variables"
-
+excerpt: "Using profile.d for loading environment variables"
+tags: "ubuntu environment variables profile.d"
 ---
 
 I typically use profile.d for loading Environment Variables. There are other methods but I find this easier to maintain.

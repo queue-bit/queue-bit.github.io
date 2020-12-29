@@ -1,6 +1,7 @@
 ---
 title:  "Finally some updates!"
 excerpt: "It's about time"
+tags: "updates december 2020"
 ---
 
 # It's about time

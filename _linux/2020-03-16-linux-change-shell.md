@@ -1,6 +1,7 @@
 ---
 title:  "Linux - Change Default Shell"
 excerpt: "bash, zsh, sh, oh my!"
+tags: "linux shell bash zsh sh rbash dash"
 ---
 # Linux - Change Default Shell
 
