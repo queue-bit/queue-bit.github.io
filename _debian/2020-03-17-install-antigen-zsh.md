@@ -1,5 +1,7 @@
 ---
 title:  "Mint - Install Antigen for ZSH"
+excerpt: "At the time of writing (March 2020), the version of ZSH Antigen included in Mint's apt was not up-to-date, here's how to install it directly."
+tags: "mint zsh antigen"
 ---
 
 Seems the version of [zsh-antigen](https://github.com/zsh-users/antigen) that's included in _apt_ isn't up to date and can cause errors when opening a new session in Mint.

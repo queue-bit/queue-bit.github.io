@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 sidebar:
   nav: "sidebar"
 title: "Adventures in Technology"
@@ -9,4 +9,8 @@ header:
 author_profile: true
 ---
 
-Notes are added when I discover something new, find that I have searched multiple times for the same solution, or if there's something I want to be able to reference later.
+Hi,
+
+I add notes to this space when I discover something new, find that I have searched multiple times for the same solution, or if there's something I want to be able to reference later.
+
+You're welcome to look around, fork the source, re-publish in accordance with the [MIT License](https://github.com/queue-bit/queue-bit.github.io/blob/master/LICENSE).

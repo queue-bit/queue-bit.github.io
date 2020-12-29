@@ -1,6 +1,7 @@
 ---
 title:  "Mint - Seahorse for GitHub SSH keys"
 excerpt: "SSH keys made easy"
+tags: "mint seahorse ssh keys github"
 ---
 
 ## 1. In _Cinnamon_

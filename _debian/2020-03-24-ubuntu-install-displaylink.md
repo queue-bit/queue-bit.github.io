@@ -1,6 +1,7 @@
 ---
 title:  "Ubuntu - Install DisplayLink Software"
 excerpt: "Works on Ubuntu and Mint 19.3"
+tags: "displaylink driver mint ubuntu"
 ---
 
 ## Driver

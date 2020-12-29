@@ -1,6 +1,7 @@
 ---
 title:  "Ubuntu - Stuck on Building EVDI kernel module with DKMS"
 excerpt: "DKMS error when installing a driver"
+tags: "dkms ubuntu evdi"
 ---
 
 ## Stuck at Building EVDI kernel module with DKMS
