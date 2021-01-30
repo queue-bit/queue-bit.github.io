@@ -118,7 +118,9 @@ collections:
   project-management:     
     permalink: "./:collection/:path/"
     output: true  
-    
+  docker:     
+    permalink: "./:collection/:path/"
+    output: true      
 
 
 defaults:
@@ -149,20 +151,6 @@ defaults:
       toc_icon: "cog"
       sidebar:
         nav: "sidebar"                 
-  # _centos
-  - scope:
-      path: "_centos"
-      type: centos
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      read_time: true
-      toc: true
-      toc_label: "Contents"
-      toc_icon: "cog" 
-      sidebar:
-        nav: "sidebar"             
   # _gnome
   - scope:
       path: "_gnome"
@@ -275,3 +263,17 @@ defaults:
       toc_icon: "cog" 
       sidebar:
         nav: "sidebar"       
+  # _docker
+  - scope:
+      path: "_docker"
+      type: docker
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "cog" 
+      sidebar:
+        nav: "sidebar"           

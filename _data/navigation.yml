@@ -18,8 +18,8 @@ sidebar:
         url: /rpi/        
       - title: "Arduino"
         url: /arduino/        
-      - title: "CentOS"
-        url: /centos/   
+      - title: "Docker"
+        url: /docker/ 
   - title: "Other"
     children:
       - title: "Process Engineering"

@@ -4,7 +4,6 @@ excerpt: "DKMS error when installing a driver"
 tags: "dkms ubuntu evdi"
 ---
 
-## Stuck at Building EVDI kernel module with DKMS
 An error I ran into when installing a driver was that the installer got stuck on the `Building EVDI kernel module with DKMS` step. I didn't capture the output so this will be a bit sparse on details.
 
 ## Solution

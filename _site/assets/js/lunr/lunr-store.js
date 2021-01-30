@@ -54,7 +54,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Ubuntu - Stuck on Building EVDI kernel module with DKMS",
-        "excerpt":"Stuck at Building EVDI kernel module with DKMS An error I ran into when installing a driver was that the installer got stuck on the Building EVDI kernel module with DKMS step. I didn’t capture the output so this will be a bit sparse on details. Solution Since there’s no...","categories": [],
+        "excerpt":"An error I ran into when installing a driver was that the installer got stuck on the Building EVDI kernel module with DKMS step. I didn’t capture the output so this will be a bit sparse on details. Solution Since there’s no easy way to kill the installer at this...","categories": [],
         "tags": ["dkms","ubuntu","evdi"],
         "url": "http://localhost:4000/debian/2020-12-28-ubuntu-dkms-error/",
         "teaser": null
@@ -63,6 +63,18 @@ var store = [{
         "excerpt":"Includes downstream distro’s, in which case the distro name is included in the title.  ","categories": [],
         "tags": [],
         "url": "http://localhost:4000/debian/",
+        "teaser": null
+      },{
+        "title": "Docker Notes",
+        "excerpt":"Notes Since docker requires elevated privileges, sudo is typically required when running these commands unless the current user has privileges. These commands are run on the Host system. Most commands support the --help flag and provide good documentation. Images Think of it as the template, a Image include the instructions...","categories": [],
+        "tags": ["docker","cp","copy","image","container","context"],
+        "url": "http://localhost:4000/docker/2021-01-24-docker-common-commands/",
+        "teaser": null
+      },{
+        "title": "Docker",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/docker/",
         "teaser": null
       },{
         "title": "Mint - Seahorse for GitHub SSH keys",
@@ -78,7 +90,7 @@ var store = [{
         "teaser": null
       },{
         "title": "pk400001za0 Webcam To USB",
-        "excerpt":"pk400001za0 Webcam to USB The pk400001za0 webcam module is commonly found in Acer and Lenovo laptops and is detected as “Suyin Corp. Acer/Lenovo Webcam [CN0316]” in Linux Mint. It’s fairly easy to wire this module to connect to a USB port on a computer, there’s a good tutorial here (https://www.youtube.com/watch?v=g8XbDJLKKys),...","categories": [],
+        "excerpt":"The pk400001za0 webcam module is commonly found in Acer and Lenovo laptops and is detected as “Suyin Corp. Acer/Lenovo Webcam [CN0316]” in Linux Mint. It’s fairly easy to wire this module to connect to a USB port on a computer, there’s a good tutorial here (https://www.youtube.com/watch?v=g8XbDJLKKys), below are my notes...","categories": [],
         "tags": ["pk400001za0","usb","webcam","camera"],
         "url": "http://localhost:4000/hardware/2020-04-06-pk400001za0-webcam-usb/",
         "teaser": null
@@ -90,9 +102,15 @@ var store = [{
         "teaser": null
       },{
         "title": "Linux - Change Default Shell",
-        "excerpt":"Linux - Change Default Shell Using chsh From the manual: The chsh command changes the user login shell. This determines the name of the user’s initial login command. A normal user may only change the login shell for her own account; the superuser may change the login shell for any...","categories": [],
+        "excerpt":"Using chsh From the manual: The chsh command changes the user login shell. This determines the name of the user’s initial login command. A normal user may only change the login shell for her own account; the superuser may change the login shell for any account. $ chsh -s {/path/to/shell}...","categories": [],
         "tags": ["linux","shell","bash","zsh","sh","rbash","dash"],
         "url": "http://localhost:4000/linux/2020-03-16-linux-change-shell/",
+        "teaser": null
+      },{
+        "title": "Linux - CLI: Jobs & Processes",
+        "excerpt":"Jobs &amp; Processes To Command Suspend currently running process CTRL+Z (^Z) List jobs jobs or jobs -l Resume last suspended process fg Resume specific suspended process fg %{job-id} Send process to background bg %{job-id} Suspend a background process kill -STOP %{job-id} List Jobs ~ jobs [1] + running bundle exec...","categories": [],
+        "tags": ["linux","shell","bash","zsh","sh","rbash","dash","jobs","suspend","bg","fg"],
+        "url": "http://localhost:4000/linux/2021-01-30-cli-jobs/",
         "teaser": null
       },{
         "title": "Linux",
@@ -132,8 +150,8 @@ var store = [{
         "teaser": null
       },{
         "title": "Tools",
-        "excerpt":"Content to come  ","categories": [],
-        "tags": ["nada"],
+        "excerpt":"A list of some of my favorite tools when managing projects. Project Management Specific Tools Jira Smartsheet Commercial Software MS Project Commercial Software Best suited to projects using a waterfall approach in my opinion. Calculates budgets based on resource rates and work assigned. Illustrates critical path using a Gantt/schedules. Highly...","categories": [],
+        "tags": ["plantuml","visio","lucidchart","conceptdraw","diagrams.net","vscode","confluence","github","process","engineering"],
         "url": "http://localhost:4000/project-management/2020-12-28-tools/",
         "teaser": null
       },{

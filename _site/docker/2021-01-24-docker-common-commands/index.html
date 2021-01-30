@@ -1,0 +1,516 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Docker Notes | Andreas Wiebe</title>
+<meta name="description" content="Common Docker terms and commands used in the CLI">
+
+
+  <meta name="author" content="Andreas Wiebe">
+  
+  <meta property="article:author" content="Andreas Wiebe">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Andreas Wiebe">
+<meta property="og:title" content="Docker Notes">
+<meta property="og:url" content="http://localhost:4000/docker/2021-01-24-docker-common-commands/">
+
+
+  <meta property="og:description" content="Common Docker terms and commands used in the CLI">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-24T00:00:00-06:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/docker/2021-01-24-docker-common-commands/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andreas Wiebe Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Andreas Wiebe
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">My Notes</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/debian/">Debian</a></li>
+          
+            <li><a href="/gnome/">Gnome</a></li>
+          
+            <li><a href="/hardware/">Hardware</a></li>
+          
+            <li><a href="/linux/">Linux</a></li>
+          
+            <li><a href="/rpi/">Raspberry Pi</a></li>
+          
+            <li><a href="/arduino/">Arduino</a></li>
+          
+            <li><a href="/docker/">Docker</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/process-engineering/">Process Engineering</a></li>
+          
+            <li><a href="/project-management/">Project Management</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Docker Notes">
+    <meta itemprop="description" content="Common Docker terms and commands used in the CLI">
+    <meta itemprop="datePublished" content="2021-01-24T00:00:00-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Docker Notes
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#notes">Notes</a></li>
+  <li><a href="#images">Images</a></li>
+  <li><a href="#containers">Containers</a></li>
+  <li><a href="#contexts">Contexts</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="notes">Notes</h2>
+
+<ul>
+  <li>Since docker requires elevated privileges, <code class="language-plaintext highlighter-rouge">sudo</code> is typically required when running these commands unless the current user has privileges.</li>
+  <li>These commands are run on the Host system.</li>
+  <li>Most commands support the <code class="language-plaintext highlighter-rouge">--help</code> flag and provide good documentation.</li>
+</ul>
+
+<h2 id="images">Images</h2>
+
+<p>Think of it as the template, a Image include the instructions needed to create a Container. They are read-only (immutable), so can be easily shared, but can be additionally customized. Similar in concept to a Virtual Machine Snapshot.</p>
+
+<p>There are public and private registries that contain Docker Images. <a href="https://hub.docker.com/">DockerHub</a>, for example, is a public registry maintained by Docker Inc.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>List:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker image ls</code></td>
+    </tr>
+    <tr>
+      <td>Start:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker run {repository-name}</code></td>
+    </tr>
+    <tr>
+      <td>Build:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker build -f /path/to/a/Dockerfile .</code> <br /><br />Or, if running from directory that has the Dockerfile:<br /> <br /><code class="language-plaintext highlighter-rouge">docker build -t {new-name} .</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="containers">Containers</h2>
+
+<p>Think of it as the running instance of an Image, a Container is a <em>runnable instance</em> of a Docker Image.</p>
+
+<p>Changes can be made while a Container is running but they won’t persist, if needed, you can persist data by creating a named volume that is stored on the host <a href="https://docs.docker.com/get-started/05_persisting_data/">https://docs.docker.com/get-started/05_persisting_data/</a>. If changes are needed to the Image (for example, to add a webserver), you can create a new image from a container.</p>
+
+<p>Containers run in isolation by default, but containers on the same network can talk to each other with container networking <a href="https://docs.docker.com/get-started/07_multi_container/">https://docs.docker.com/get-started/07_multi_container/</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>List:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker container ls</code></td>
+    </tr>
+    <tr>
+      <td>List Running:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker ps</code></td>
+    </tr>
+    <tr>
+      <td>Start:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker run {container-id}</code></td>
+    </tr>
+    <tr>
+      <td>Stop:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker stop {container-id}</code></td>
+    </tr>
+    <tr>
+      <td>Delete:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker rm {container-id}</code></td>
+    </tr>
+    <tr>
+      <td>Copy a File:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker cp [OPTIONS] {container-id}:{src-path} {dest-path}</code></td>
+    </tr>
+    <tr>
+      <td>Run Command in Container:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker exec [OPTIONS] {container-id} {command} [ARG...]</code> <br /> <code class="language-plaintext highlighter-rouge">docker exec -ti pop_container sh -c "echo Hello World!"</code></td>
+    </tr>
+    <tr>
+      <td>Create new Image from Container’s changes:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker commit {options} {container-id}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="contexts">Contexts</h2>
+
+<p>Contexts allow a single Docker CLI to manage multiple Docker nodes, Kubernetes clusters, etc.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>List:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context ls</code></td>
+    </tr>
+    <tr>
+      <td>Inspect Current:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context inspect</code></td>
+    </tr>
+    <tr>
+      <td>Inspect Other:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context inspect {context-name}</code></td>
+    </tr>
+    <tr>
+      <td>Create:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context create</code></td>
+    </tr>
+    <tr>
+      <td>Delete:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context rm {context-name}</code></td>
+    </tr>
+    <tr>
+      <td>Switch:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context use {context-name}</code></td>
+    </tr>
+    <tr>
+      <td>Export:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context export {context-name}</code> <br /><br />Kubernetes: <br /><code class="language-plaintext highlighter-rouge">docker context export {context-name} --kubeconfig</code></td>
+    </tr>
+    <tr>
+      <td>Import (not for Kubernetes):</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context import {context-name} {filename}</code> <br /><br />Won’t work for Kubernetes, instead, merge with existing <code class="language-plaintext highlighter-rouge">~/.kube/config</code> file</td>
+    </tr>
+    <tr>
+      <td>Update:</td>
+      <td><code class="language-plaintext highlighter-rouge">docker context update {context-name} {--flag} {"text"}</code> <br /><br />Flags: <br /> <em>–default-stack-orchestrator</em> <br /> <em>–description</em> <br /><em>–docker</em> <br /> <em>–kubernetes</em></td>
+    </tr>
+  </tbody>
+</table>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-24T00:00:00-06:00">January 24, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Docker+Notes%20http%3A%2F%2Flocalhost%3A4000%2Fdocker%2F2021-01-24-docker-common-commands%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fdocker%2F2021-01-24-docker-common-commands%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdocker%2F2021-01-24-docker-common-commands%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/docker/" class="pagination--pager" title="Docker
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Andreas Wiebe. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
