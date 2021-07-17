@@ -121,8 +121,9 @@ collections:
   docker:     
     permalink: "./:collection/:path/"
     output: true      
-
-
+  kubernetes:
+    permalink:  "./:collection/:path/"
+    output: true
 defaults:
   # _posts
   - scope:
@@ -267,6 +268,20 @@ defaults:
   - scope:
       path: "_docker"
       type: docker
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "cog" 
+      sidebar:
+        nav: "sidebar"
+  # k8s
+  - scope:
+      path: "_kubernetes"
+      type: kubernetes
     values:
       layout: single
       author_profile: false

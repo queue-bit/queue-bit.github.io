@@ -20,6 +20,8 @@ sidebar:
         url: /arduino/        
       - title: "Docker"
         url: /docker/ 
+      - title: "Kubernetes"
+        url: /kubernetes/         
   - title: "Other"
     children:
       - title: "Process Engineering"
