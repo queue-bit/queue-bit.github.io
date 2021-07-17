@@ -6,14 +6,19 @@ tags: "kubernetes, bare metal, k8s"
 
 ## Notes
 
-1. Adjust BIOS settings
+### Adjust BIOS settings
+
     1. Turn off powersaving features
     1. Allow boot from USB
-    1. etc. 
-1. Install Debian
+    1. etc.
+
+### Install Debian
+
     1. Text-based install
     1. Deselect Gnome, don't need it 
-1. In Debian:
+
+### Debian Config
+
     1. Add user to sudoers:
         ```bash
         % su
@@ -43,7 +48,8 @@ tags: "kubernetes, bare metal, k8s"
         % sudo systemctl reboot
         
         ```
-    1. Load br_netfilter:
+### Load br_netfilter
+
         ```bash
         % sudo modprobe br_netfilter
 
@@ -63,7 +69,9 @@ tags: "kubernetes, bare metal, k8s"
         # Apply the configs using sysctl:
         % sudo sysctl --system
         ```
-    1. Install containerd (instead of docker):
+
+### Install containerd (instead of docker)
+
         ```bash
 
         # First, install curl, gnupg, gnupg2 and gnupg1:
@@ -97,7 +105,9 @@ tags: "kubernetes, bare metal, k8s"
         # Logout out of su:
         % exit
         ```
-    1. Install Kubernetes:
+
+### Install Kubernetes
+
         ```bash
 
         # Add Google's apt-key:
@@ -121,6 +131,7 @@ tags: "kubernetes, bare metal, k8s"
 
         # reboot:
         % sudo systemctl reboot
+        ```
     1. On the control-plane, initialize kubeadm:
         ```bash
 
@@ -148,5 +159,6 @@ tags: "kubernetes, bare metal, k8s"
 
         % kubeadm join <ip/host given>:6443 --token <token given>  --discovery-token-ca-cert-hash <hash given> 
         ```
-    1. Install a load balancer
+### Install a load balancer
+
         1. For metallb, see: [this youtube video](https://www.youtube.com/watch?v=xYiYIjlAgHY)
