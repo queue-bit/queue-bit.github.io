@@ -20,14 +20,12 @@ tags: "kubernetes, bare metal, k8s"
 ### Debian Config
 
 1. Add user to sudoers:
-
     ```bash
     % su
     % apt install sudo
     % /usr/sbin/usermod -aG sudo <username>
     % systemctl reboot 
     ```
-
 1. Turn off powersaving features (sleep, suspend, hibernate):
     ```bash
     % sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
@@ -155,12 +153,12 @@ It's preferred to use containerd instead of a full Docker install.
     % kubectl get pods -n ingress-nginx -l app.kubernetes.io/name=ingress-nginx --watch
     ```
 1. On the worker nodes, initialize kubeadm using the 'join' command given in the previous step:
-        ```bash
+    ```bash
 
-        # Where 'ip/host given', 'token given', 'hash given' are based on your install, this entire command with the correct values were provided in the previous step when you initialized kubeadmin
+    # Where 'ip/host given', 'token given', 'hash given' are based on your install, this entire command with the correct values were provided in the previous step when you initialized kubeadmin
 
-        % kubeadm join <ip/host given>:6443 --token <token given>  --discovery-token-ca-cert-hash <hash given> 
-        ```
+    % kubeadm join <ip/host given>:6443 --token <token given>  --discovery-token-ca-cert-hash <hash given> 
+    ```
 
 ### Install a load balancer
 
