@@ -118,6 +118,9 @@ collections:
   project-management:     
     permalink: "./:collection/:path/"
     output: true  
+  product-management:     
+    permalink: "./:collection/:path/"
+    output: true      
   docker:     
     permalink: "./:collection/:path/"
     output: true      
@@ -250,6 +253,20 @@ defaults:
       toc_icon: "cog" 
       sidebar:
         nav: "sidebar"            
+# _product-management
+  - scope:
+      path: "_product-management"
+      type: product-management
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: true
+      toc: true
+      toc_label: "Contents"
+      toc_icon: "cog" 
+      sidebar:
+        nav: "sidebar"   
   # _about
   - scope:
       path: "_about"
