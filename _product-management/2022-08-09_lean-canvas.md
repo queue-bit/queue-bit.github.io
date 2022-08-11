@@ -6,7 +6,7 @@ tags: "product management, business analysis, business modeling"
 
 ## Lean Canvas
 
-![Lean Canvas](../assets/lean-canvas.png) 
+![Lean Canvas](/assets/lean-canvas.png) 
 
 | Fields | Description |
 |-|-|
