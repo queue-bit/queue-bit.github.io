@@ -20,7 +20,7 @@ _Winnipeg, MB_
 - Responsible for bringing Northfield IT into alignment with ISO-27001 for certification.
 - Responsible for evaluating, documenting, and implementing improvements in process and procedure.
 - Work with Product Team on defining Product Roadmap.
-- Mentor and assist Director of Product when needed.
+- Assist Director of Product when needed.
 - Evaluate existing process and procedure against internal policies, ITIL, COBIT, and ISO standards.
 - Analyze processes, procedures, team workflows, and best practices to create and maintain process and procedure documentation that align with policies and best practices.
 - Maintain object schema and related documentation.
