@@ -1,10 +1,10 @@
 ---
 title:  "Lean Canvas"
-excerpt: ""
-tags: "product management, business analysis, business modeling"
+excerpt: "Lean Canvas Template"
+tags: "product management, business analysis, business modelling"
 ---
 
-## Lean Canvas
+## Lean Canvas Template
 
 ![Lean Canvas](/assets/lean-canvas.png) 
 
