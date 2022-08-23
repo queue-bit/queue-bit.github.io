@@ -1,7 +1,7 @@
 ---
 title:  "A Starting Checklist"
-excerpt: ""
-tags: ""
+excerpt: "A checklist for getting started as a Product Manager in a new company or new product"
+tags: "product management, checklist"
 ---
 
 Reddit user `DesperateFlanders` posted a [checklist for Product Managers](https://old.reddit.com/r/ProductManagement/comments/wpdnyp/new_starter_checklist_for_product_managers/), I loved the idea and have tweaked it to suit my needs and experience.
