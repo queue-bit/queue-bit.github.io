@@ -1,18 +1,16 @@
 ---
-layout: single
-sidebar:
-  nav: "sidebar"
-title: "Adventures in Technology"
-excerpt: "A collection of notes and thoughts"
-header:
-  overlay_color: "#6f7582"
-author_profile: true
+title:  "About"
+excerpt: ""
 ---
+<div class="row">
+    <div class="col-3 col-12-small"><img style="border-radius: 25px;" src = "/media/avatar.jpg" /></div>
+    <div class="col-9 col-12-small">
+        <p>
+            Hello Reader, <br/>I'm a <strong>Product Manager</strong> & <strong>Technologist</strong> in Canada and this is a small collection of notes that I have written for myself.
+        </p>
+        <p>
+            The site is hosted on GitHub pages, the static HTML pages are built automatically when new markdown is merged into the main github branch by a bespoke Go program. <br/>The theme is provided by <a href="https://html5up.net/">HTML5 UP</a>.
+        </p>
+    </div>
+</div>
 
-Hi,
-
-I add notes to this space when I discover something new, find that I have searched multiple times for the same solution, or if there's something I want to be able to reference later.
-
-You're welcome to look around or look at the [source](https://github.com/queue-bit/queue-bit.github.io/).
-
-[A copy of my resume is here](resume.md) or you can [find me on LinkedIn](https://www.linkedin.com/in/andreasfwiebe).
