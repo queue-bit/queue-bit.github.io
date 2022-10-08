@@ -30,8 +30,29 @@ User Journey's can be created for each [persona](2022-08-16_personas.md), this h
 
 ---
 
+User Journeys can come in various different forms, [Mermaid.js](https://mermaid-js.github.io/mermaid/#/user-journey) even supports a graphical view:
+
+```mermaid
+journey
+    title Procuring Software Solution - Mermaid.js example
+    section Start Research
+      Online Search: 5: Buyer, IT
+      Compile list of products: 2: Buyer, IT
+    section Compare
+      Read reviews: 3: Buyer
+      Rank products: 3: Buyer
+    section Evaluate
+      Sign-up for trials: 3: Buyer
+      Install trial: 3: IT
+      Test product: 5: Buyer, IT
+      Update rankings: 3: Buyer
+    section Purchase
+        Purchase product: 4: Buyer
+```
+
 
 ## Resources
 
 - [edit.org](https://edit.org/blog/free-customer-journey-map-templates) has a good selection of online-editable templates
 - [userinterviews.com](https://www.userinterviews.com/blog/best-customer-journey-map-templates-examples) has a good write-up with downloadable templates
+- [mermaid-js.github.io](https://mermaid-js.github.io/mermaid/#/user-journey)
