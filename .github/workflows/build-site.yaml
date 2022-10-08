@@ -50,7 +50,7 @@ jobs:
       - name: Build
         run: |
           pwd
-          ls
+          ls ./out
           go run main.go
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
