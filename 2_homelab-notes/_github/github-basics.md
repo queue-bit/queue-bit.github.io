@@ -49,7 +49,20 @@ So the workflow is generally:
 1. Commit your changes on Local to your Local repository
 1. Push your changes to Origin
 
-Work should be done on a Branch instead of Main.
+Work should be done on a Branch instead of Main. For example, in the following diagram we `checkout` branch1, do two commits to branch1, then `merge` it back into main:
+
+```mermaid
+gitGraph
+    commit id: "commit changes to main"
+    commit id: "branch1 is checked out"
+    branch branch1
+    checkout branch1
+    commit id: "commit changes to branch1"
+    commit id: "commit more changes to branch1"
+    checkout main
+    merge branch1
+    commit id: "commit more changes to main"
+```
 
 ### Working on an existing Branch
 
