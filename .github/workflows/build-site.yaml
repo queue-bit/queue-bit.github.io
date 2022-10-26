@@ -40,6 +40,11 @@ jobs:
         with:
           repository: queue-bit/go-pubsite
           path: './'
+      - name: Checkout queue-bit/template-txt
+        uses: actions/checkout@v3
+        with:
+          repository: queue-bit/template-txt
+          path: './templates/txt'          
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
