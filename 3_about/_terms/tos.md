@@ -1,3 +1,14 @@
+---
+title:  "License and Terms of Service"
+excerpt: ""
+tags: "tos license"
+---
+
+The content on this website is licensed under Creative Commons Attribution 4.0 International, you can read the [license here](https://github.com/queue-bit/queue-bit.github.io/blob/main/LICENSE)
+
+
+
+```
 Attribution 4.0 International
 
 =======================================================================
@@ -393,3 +404,4 @@ the avoidance of doubt, this paragraph does not form part of the public
 licenses.
 
 Creative Commons may be contacted at creativecommons.org.
+```
