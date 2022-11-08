@@ -1,10 +1,12 @@
 ---
 title:  "A Starting Checklist"
-excerpt: "This is a checklist to help get you started as a Product Manager in a new company or new product."
+intro: "This is a checklist to help get you started as a Product Manager in a new company or new product."
+description: "A checklist to help get you started as a Product Manager in a new company or new product."
 tags: "product management, checklist"
+date: "2022-08-17"
 ---
 
-## Preamble
+### Preamble
 
 Reddit user `DesperateFlanders` posted a [checklist for Product Managers](https://old.reddit.com/r/ProductManagement/comments/wpdnyp/new_starter_checklist_for_product_managers/), I loved the idea and have tweaked it to suit my needs and experience.
 
@@ -15,7 +17,7 @@ Notes:
 - Much of this is intended to be done in parallel, don't wait for one task to finish before starting the next.
 - You will likely be working on plans and strategies the entire time.
 
-## The Beginning
+### The Beginning
 
 We all start somewhere, in this case it's more about getting your work environment configured, getting access to things, and getting to know your place in the organization.
 
@@ -47,7 +49,7 @@ We all start somewhere, in this case it's more about getting your work environme
   - We're doing this now, while you're background knowledge is incomplete, so that you get a sense of what a new user experiences without being bogged down by preconceived notions.
   - [ ] Take notes of any friction points or anything where you need to get help
 
-## Discovery
+### Discovery
 
 This phase is all about learning as much about the company and product as you can as quickly as possible. You should listen more than you speak, stay away from making suggestions or product decisions at this point (except for low-hanging fruit that solves an immediate problem).
 
@@ -119,7 +121,7 @@ This phase is all about learning as much about the company and product as you ca
 
 Tip: You'll notice that I'm suggesting you share your meeting notes after meetings, this is a good habit to have as it ensures that you understood what they said correctly.
 
-## Understanding & Alignment
+### Understanding & Alignment
 
 Now that you know who the players are, what work has been done in the past, and have had a chance to get to know the product it's time to start analysis and get alignment with stakeholders.
 

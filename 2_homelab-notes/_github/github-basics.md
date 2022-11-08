@@ -1,13 +1,12 @@
 ---
 title:  "Git Basics"
-excerpt: ""
-tags: "gh, github"
+intro: "Most of this isn't Github specific but since I mostly use Github for my Git I'll leave it here."
+description: "Some notes on git workflow."
+tags: "gh, github, git, pull, push, commit"
+date: "2022-10-08"
 ---
 
-
-Most of this isn't Github specific but since I mostly use Github for my Git I'll leave it here.
-
-## Git Workflow
+### Git Workflow
 
 At a very high level, consider the following as the layout for repositories stored in git:
 
@@ -64,33 +63,33 @@ gitGraph
     commit id: "commit more changes to main"
 ```
 
-### Working on an existing Branch
+#### Working on an existing Branch
 
-#### Before you make changes
+##### Before you make changes
 
 1. Make sure you have the latest version on your local:
 
-    ```zsh
-    $ git pull origin {branch name}
+    ```bash
+    git pull origin {branch name}
     ```
 
-    If you're already up to date you'll see something like:
+1. If you're already up to date you'll see something like:
 
-    ```zsh
+    ```bash
     From github.com:{user}/{repo}
     * branch            main       -> FETCH_HEAD
     Already up to date.
 
     ```
 
-    If you're not up to date you'll see information on which files are being pulled down from Origin - ***keep an eye out for errors***.
+1.  If you're not up to date you'll see information on which files are being pulled down from Origin - ***keep an eye out for errors***.
 
-#### Add files/changes to your local repo
+##### Add files/changes to your local repo
 
 1. When you make changes and save files, you can see what's changed on your local:
 
-    ```zsh
-    $ git status
+    ```bash
+    git status
     ```
 
     This tells you what branch you're on and what files have changed.
@@ -99,47 +98,47 @@ gitGraph
 
     To add ***all*** files:
 
-    ```zsh
-    $ git add .
+    ```bash
+    git add .
     ```
 
     OR:
 
-    ```zsh
-    $ git add --all
+    ```bash
+    git add --all
     ```
 
     To add a ***single*** file:
 
-    ```zsh
-    $ git add <filename>
+    ```bash
+    git add <filename>
     ```
 
-#### Commit the changes to your local repo
+##### Commit the changes to your local repo
 
-1. When all the files have been added to your Local git, you "commit" them with a message about your changes:
+When all the files have been added to your Local git, you "commit" them with a message about your changes:
 
-    ```zsh
-    $ git commit -m "your message/description"
-    ```
+```bash
+git commit -m "your message/description"
+```
 
-    Example 1: `git commit -m "Added information for new users to the landing page"`
+Example 1: `git commit -m "Added information for new users to the landing page"`
 
-    Example 2: `git commit -m "Fixed bug issue-31"`
+Example 2: `git commit -m "Fixed bug issue-31"`
 
-    **Note:** _if you want/need to add more information, leave out the -m, it will take you into a longform description editor (if you do that accidentally: hit `Escape`, then type `wq`, then press `Enter`)_
+**Note:** _if you want/need to add more information, leave out the -m, it will take you into a longform description editor (if you do that accidentally: hit `Escape`, then type `wq`, then press `Enter`)_
 
-#### Push your changes to Origin
+##### Push your changes to Origin
 
 1. Do git status again:
 
-    ```zsh
-    $ git status
+    ```bash
+    git status
     ```
 
     You should see:
  
-    ```zsh
+    ```bash
     On branch {branch name}
     nothing to commit, working tree clean
     ```
@@ -148,82 +147,82 @@ gitGraph
 
 2. You can now Push your changes to Origin for someone to review:
 
-    ```zsh
-    $ git push origin {branch name} 
+    ```bash
+    git push origin {branch name} 
     ```
 
 ----
 
-#### Recap
+##### Recap
 
 So, a recap... working on the Branch SEUSS-1234
 
 1. Pull the code from Origin into your Local:
 
-    `$ git pull origin SEUSS-1234`
+    `git pull origin SEUSS-1234`
 
 1. Work on Local - check if you have any untracked files and what Branch you're on:
 
-    `$ git status`
+    `git status`
 
 1. Commit your changes on Local to your Local repository:
 
     First add all your files:
 
-    `$ git add --all`
+    `git add --all`
 
     Next commit them:
 
-    `$ git commit -m "your message/description"`
+    `git commit -m "your message/description"`
 
 1. Push your changes to Origin
 
     Verify all your files are tracked:
 
-    `$ git status`
+    `git status`
 
     Then push it up:
 
-    `$ git push origin SEUSS-1234`
+    `git push origin SEUSS-1234`
 
-### Creating a new Branch on an existing Repo
+#### Creating a new Branch on an existing Repo
 
 1. In your working directory (create one first if you haven't already), clone Main from Origin to your Local:
 
-    ```zsh
-    $ git clone {URL}
+    ```bash
+    git clone {URL}
     ```
 
     You can find the {URL} in GitHub, look for the _Clone or download_ button, then select _Clone with SSH_.
 
 1. This clones the code into a new subdirectory, enter that directory:
 
-    ```zsh
-    $ cd {directory}
+    ```bash
+    cd {directory}
     ```
 
 1. Checkout Main:
 
-    ```zsh
-    $ git checkout main
+    ```bash
+    git checkout main
     ```
 
 1. For fun, pull Main from Origin... just in case someone merged something since you checked it out:
 
-    ```zsh
-    $ git pull origin main
+    ```bash
+    git pull origin main
     ```
 
 1. Checkout a new Branch:
 
-    ```zsh
-    $ git checkout -b {branch name}
+    ```bash
+    git checkout -b {branch name}
     ```
 
     Where {branch name} is the name you're giving this Branch. 
 1. Push the new Branch to Origin:
 
-    ```zsh
-    $ git push origin {branch}
+    ```bash
+    git push origin {branch}
     ```
     This will create the Branch on Origin.

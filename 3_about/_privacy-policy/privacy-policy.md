@@ -1,16 +1,18 @@
 ---
 title:  "Privacy Policy"
-excerpt: ""
+intro: ""
+description: "Privacy Policy for this site."
 tags: "privacy"
+date: "2022-10-25"
 ---
 
-This site does not capture, collect, store or process any personal identifiable information (PII) or use cookies, but the Hosting Provider does.
+This site does not capture, collect, store or process any personal identifiable information (PII) or use cookies, but the Hosting Provider might.
 
-## GitHub Hosting
+### GitHub Hosting
 
 This site is hosted on GitHub pages, GitHub collects personal identifiable information as detailed in their [Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement#what-information-github-collects).
 
-### Data collection  
+#### Data collection  
 
 [https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection):
 

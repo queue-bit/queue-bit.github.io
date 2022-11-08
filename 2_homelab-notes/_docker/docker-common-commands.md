@@ -1,16 +1,18 @@
 ---
 title:  "Docker Notes"
-excerpt: "Common Docker terms and commands used in the CLI."
-tags: "docker cp copy image container context"
+intro: "Common Docker terms and commands used in the CLI."
+description: "Common Docker terms and commands used in the CLI."
+tags: "docker,cp,copy,image,container,context"
+date: "2021-01-24"
 ---
 
-## Notes
+### Notes
 
 * Since docker requires elevated privileges, `sudo` is typically required when running these commands unless the current user has privileges.
 * These commands are run on the Host system.
 * Most commands support the `--help` flag and provide good documentation.
 
-## Images
+### Images
 
 Think of it as the template, a Image include the instructions needed to create a Container. They are read-only (immutable), so can be easily shared, but can be additionally customized. Similar in concept to a Virtual Machine Snapshot.
 
@@ -23,7 +25,7 @@ There are public and private registries that contain Docker Images. [DockerHub](
 | Start: | ``` docker run {repository-name} ```|
 | Build: | `docker build -f /path/to/a/Dockerfile .` <br /><br />Or, if running from directory that has the Dockerfile:<br /> <br />`docker build -t {new-name} .` |
 
-## Containers
+### Containers
 
 Think of it as the running instance of an Image, a Container is a *runnable instance* of a Docker Image. 
 
@@ -44,7 +46,7 @@ Containers run in isolation by default, but containers on the same network can t
 | Run Command in Container: | ``` docker exec [OPTIONS] {container-id} {command} [ARG...] ``` <br /> ```docker exec -ti pop_container sh -c "echo Hello World!"``` |
 | Create new Image from Container's changes: | ```docker commit {options} {container-id} ```|
 
-## Contexts
+### Contexts
 
 Contexts allow a single Docker CLI to manage multiple Docker nodes, Kubernetes clusters, etc.
 

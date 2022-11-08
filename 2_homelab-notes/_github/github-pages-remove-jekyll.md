@@ -1,11 +1,12 @@
 ---
 title:  "Replace Jekyll on Github Pages"
-excerpt: ""
-tags: "gh-pages, github pages, github, jekyll"
+intro: "If you're switching from Jekyll to something else on Github Pages, this worked for me."
+description: "Switching from Jekyll to something else on GitHub Pages."
+tags: "gh-pages, github-pages, pages, github, jekyll"
+date: "2022-10-08"
 ---
-If you're switching from Jekyll to something else on Github Pages, this worked for me.
 
-## Edit Your Repo
+### Edit Your Repo
 
 I suggest you do these changes in a new branch, testing locally to make sure everything builds properly.
 
@@ -21,7 +22,7 @@ On your local:
    1. If you're switching to Hugo you can find information here: [https://github.com/marketplace/actions/hugo-setup](https://github.com/marketplace/actions/hugo-setup)
 1. Commit your changes but don't merge yet
 
-## Delete Jekyll
+### Delete Jekyll
 
 Once you have a branch that's been tested with your new page builder (Gatsby, Hugo, etc.) ready to go, you can go ahead and change settings on the Github end of things.
 
@@ -38,7 +39,7 @@ On Github:
 1. Click `Actions`, delete all previous workflow runs
 1. Merge your new branch - this should trigger a new build using the action you created in the [Edit Your Repo](#edit-your-repo) step
 
-## Environment Protection Rules Error
+### Environment Protection Rules Error
 
 If you get a `Branch "main" is not allowed to deploy to github-pages due to environment protection rules` error, this is easily fixed.
 

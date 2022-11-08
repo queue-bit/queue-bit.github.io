@@ -1,16 +1,18 @@
 ---
-title:  "This Site"
-excerpt: "This site is built using a custom golang program to traverse markdown files and output static HTML"
+title:  "go-pubsite"
+intro: "This site is built using a custom golang program to traverse markdown files and output static HTML."
+description: "How I built this site with a custom golang program that takes markdown and outputs HTML."
 tags: "golang, go, github actions, markdown, html"
+date: "2022-11-02"
 ---
 
-## Requirements
+### Requirements
 
-### Purpose
+#### Purpose
 
 Automatically build my website (andreaswiebe.com) by converting a directory-tree containing markdown files into static html pages when commits are merged to main. Take the opportunity to learn Go and GitHub actions.
 
-#### Intro
+##### Intro
 |||
 |-|-|
 | **For** | Myself |
@@ -20,31 +22,31 @@ Automatically build my website (andreaswiebe.com) by converting a directory-tree
 | **Unlike**| Jekyll and Hugo|
 | **This Product** |Creates a static html website using markdown and a template without requiring multiple configuration files within the content directories.|
 
-#### Who is it for?
+##### Who is it for?
 
 *go-pubsite* is primarily for myself, I want to focus on writing content, not configuration files.
 
-##### Background
+###### Background
 
  I found myself reluctant to add more of my notes to my notes repo due to the overhead of having to add configuration files every time I wanted a new category. Since I wanted to learn some Go and more about GitHub Actions I decided to create new tooling instead of taking one of the more robust pre-existing solutions.
 
-##### Market Assumptions
+###### Market Assumptions
 
 - I will be the only person using *go-pubsite*
 
-##### Market Opportunities
+###### Market Opportunities
 
 - Not applicable as this is a personal project.
 
-##### Goals
+###### Goals
 
 - Create a static website generator with minimal configuration files
 - Learn some Go
 - Learn GitHub Actions
 
-### Features / Functionality
+#### Features / Functionality
 
-#### Core Elements
+##### Core Elements
 
 - Only one configuration file required
   - All other configuration to be in the frontmatter of the markdown
@@ -56,7 +58,7 @@ Automatically build my website (andreaswiebe.com) by converting a directory-tree
 - Build in a way that content, templates, and the *go-pubsite* program each have their own repo
 - Use a GitHub action to convert the notes repo into static html files and deploy to GitHub Pages
 
-#### Look and Feel
+##### Look and Feel
 
 *go-pubsite* will run from the CLI, it expects there to be:
 
@@ -64,33 +66,38 @@ Automatically build my website (andreaswiebe.com) by converting a directory-tree
 2. A directory `/template` that contains a HTML template in a subdirectory (i.e. /template/txt)
 3. A directory `/.config` that contains a single `config.yaml` for the site configuration
 
-### Release Criteria
+#### Release Criteria
 
 - Program can traverse content directory and output well-formed HTML to the output directory
 
-### Timeline & Constraints
+#### Timeline & Constraints
 
 - No budget or dependencies, I am the only resource.
 - Can only be worked on over weekends and when time allows, attempt to accomplish it within 16 hours
 
+---
 
+### The Solution v1.0.0
 
-## The Solution
+Note that v1.0.0 is replaced by v2.0.0 which adds additional functionality and some bug fixes but otherwise remains the same. See [Changes V2.0.0](#changes-v200) for more information.
 
 The solution has three major components, each with its own repo.
 
-- [Component 1: The Go Program](#component-1-the-go-program-go-pubsite)
-- [Component 2: The Content](#component-2-the-content-queue-bitgithubio)
-- [Component 3: The Template](#component-3-the-template-template-txt)
+1. [The Go Program](#component-1-the-go-program)
+1. [The Content](#component-2-the-content)
+2. [The Template](#component-3-the-template)
 
+Please be sure to read and understand the [license](https://github.com/queue-bit/go-pubsite/blob/main/LICENSE) before using this.
 
-### Component 1: The Go Program ([go-pubsite](https://github.com/queue-bit/go-pubsite))
+#### Component 1: The Go Program
+
+Repo: [go-pubsite](https://github.com/queue-bit/go-pubsite/releases/tag/v1.0.0)
 
 At a high-level, this Go program iterates through a content directory, converts markdown files to HTML, and copies static files to an output directory. The program expects and requires the `/content` and `/templates` directories to exist and have appropriate files within them (as described below).
 
-#### Features
+##### Features
 
-##### Frontmatter
+###### Frontmatter
 
 Frontmatter is **required** in markdown files and is defined at the top of the document between three dashes `---`. 
 
@@ -103,7 +110,7 @@ Currently supported tags:
 Note that the excerpt is displayed on content pages between the breadcrumb navigation and TOC, this will change in the next released version.
 
 Example:
-```
+```yaml
 ---
 title:  "A sample title"
 excerpt: "Excerpt I want to display between the breadcrumbs and the TOC"
@@ -111,15 +118,15 @@ tags: "future use tags"
 ---
 ```
 
-##### Table of Contents
+###### Table of Contents
 
 The program will automatically generate a Table of Contents for markdown files that have more than two headings.
 
-##### Mermaid.js Diagrams
+###### Mermaid.js Diagrams
 
 The program supports [mermaid.js](https://mermaid-js.github.io/mermaid/) diagrams in the markdown files, to use them you need to encapsulate them with three backticks and the word mermaid:
 
-````
+````text
 ```mermaid
 graph TD;
     A-->B;
@@ -139,19 +146,21 @@ graph TD;
     C-->D;
 ```
 
-##### Mixed Markdown and HTML
+###### Mixed Markdown and HTML
 
 HTML is allowed in the markdown files and will be passed along as-is.
 
 ---
 
-### Component 2: The Content ([queue-bit.github.io](https://github.com/queue-bit/queue-bit.github.io))
+#### Component 2: The Content 
+
+Repo: [queue-bit.github.io](https://github.com/queue-bit/queue-bit.github.io)
 
 The content repo contains all the notes that show up on this site. Notes are organized into directories, the directory naming and structure dictates the navigation on the website as described below.
 
 The `content` directory needs to be of this structure:
 
-```
+```treeview
 ./
 │
 ├── content/
@@ -179,16 +188,18 @@ The `content` directory needs to be of this structure:
 └── README.md
 
 ```
-#### index.md
+
+
+##### index.md
 
 `/content/index.md` is the homepage for the site.
 
-#### Config Directory 
+##### Config Directory 
 
 `/content/.config/` contains the `config.yaml` file, this is the only configuration file for the site and sets the overall metadata:
 
 
-```
+```yaml
 title:          The site title
 domain:         The domain of the site (www.example.com)
 baseurl:        The base url of the site (http://www.example.com)
@@ -200,13 +211,13 @@ twitter:        Link to your twitter account (https://twitter.com/example-user)
 
 ```
 
-#### Media Directory
+##### Media Directory
 
 `/content/_media/` contains all non-markdown files, this is where you put images, downloadable files, etc. 
 
 Note that it becomes `/media` in the output (no underscore), adjust your links accordingly.
 
-#### Section Directories
+##### Section Directories
 
 Sections show up in the Nav as top-level items, they must always start with a number followed by an underscore (eg. `1_`), the number determines it's position in the menu. Additionally, each section gets an index page with links to all content within the section.
 
@@ -220,7 +231,7 @@ Examples:
 |`/content/2_home-security/`| The second item to appear in the top navigation, with the title: `Home Security`|
 
 
-#### Category Directories 
+##### Category Directories 
 
 Categories show up in the Nav under the top-level (section) items, they must always start with a underscore `_` and be inside a section directory. Additionally, each category gets an index page with links to all content within the category.
 
@@ -238,7 +249,9 @@ Note that categories are sorted alphabetically, there is no override for differe
 
 ---
 
-### Component 3: The Template ([template-txt](https://github.com/queue-bit/template-txt))
+#### Component 3: The Template
+
+Repo: [template-txt](https://github.com/queue-bit/template-txt/releases/tag/v1.0.0)
 
 The template being used is a modified version of:
 
@@ -249,7 +262,7 @@ The template being used is a modified version of:
 It's modified to be used with the `html/template` library in go, and more specifically the Go program mentioned in [Component 1](#component-1-the-go-program-go-pubsite).
 
 
-#### Expected Vars
+##### Expected Vars
 
 The template in this repo expects the following data to be passed to it:
 
@@ -271,7 +284,7 @@ The template in this repo expects the following data to be passed to it:
 
 
 
-### How It All Comes Together
+#### How It All Comes Together
 
 A GitHub Action is stored and run on the Content repo when changes are committed to the Main branch. The action creates an Ubuntu environment, then:
 1. Checks out the Go program repository
@@ -299,11 +312,11 @@ GitHub-Pages ->> GitHub-Action : Success / Failure
 ```
 
 
-#### Example
+##### Example
 
 With the content directory structure:
 
-```
+```treeview
 ./
 │
 ├── content/
@@ -326,7 +339,7 @@ With the content directory structure:
 
 And a template structure:
 
-```
+```treeview
 ./
 │
 └── txt/
@@ -346,7 +359,7 @@ And a template structure:
 
 The file output would be as follows:
 
-```
+```treeview
 ./
 ├── index.html
 ├── media
@@ -374,12 +387,14 @@ The file output would be as follows:
 
 And the Navigation on the site would be:
 
-```
+Note: article titles are set in frontmatter
+
+```treeview
 www.justanexample.com
 ├── Home
 ├── About
 |    └── Terms
-|        ├── Privacy Policy       //note: article titles are set in frontmatter
+|        ├── Privacy Policy
 |        └── Terms & Conditions
 └── Home Security
      ├── Alarms
@@ -389,3 +404,60 @@ www.justanexample.com
          └── Temperature Sensors
 
 ```
+<br/><br/><br/>
+
+---
+
+### Changes v2.0.0
+
+I've cut a new major version as many of these changes will break processing of content created for V1.0.0
+
+#### Component 1: The Go Program
+
+##### Features
+
+###### Config file tags
+
+Config file processing has been expanded to include a set of new tags:
+
+| New Tag | Note |
+|-|-|
+|`ogtype`|Default OpenGraph type, can be overridden in the page's frontmatter|
+|`author`|Default OpenGraph author, can be overridden in the page's frontmatter|
+|`ogimage`|Default OpenGraph image, can be overridden in the page's frontmatter|
+|`faviconpath`|Relative path to the favicon directory|
+
+###### Frontmatter
+
+Frontmatter has been expanded to include new tags and replace poorly named tags:
+
+|Tag | Note |
+|-|-|
+|`excerpt`| Deprecated, replace by `intro`|
+|`intro`|Displays between the Header and the Table of Contents (in my template)|
+|`ogtype`| New optional field, default is set in the site config|
+|`author`| New optional field, default is set in the site config|
+|`description`|New field, used for meta tags|
+|`date`|New field, passed to the template|
+|`ogimage`|New field, OpenGraph image for the article/page|
+
+The pre-existing `tags` tag is now being passed to the template as well.
+
+###### Table of Contents
+
+The TOC function was producing broken HTML, this is now fixed. [See issue on GitHub](https://github.com/queue-bit/go-pubsite/issues/10).
+
+###### Pretty  URL's
+
+I realized after some testing that GitHub Pages seems to support pretty URL's out of the box, I've adjusted the link building to leave out the `.html`
+
+#### Component 2: The Content
+
+Anyone switching from V1.0.0 will need to update their frontmatter and config file.
+
+#### Component 3: The Template
+
+- Added support for opengraph tags (ogtype, author, description, url, date, image)
+- Added support for favicons
+- Tweaked to check if optional vars exist before rendering html
+- Added `prism` css and js for nicer code-block formatting

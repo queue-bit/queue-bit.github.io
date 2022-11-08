@@ -1,10 +1,12 @@
 ---
 title:  "Github Action Tricks"
-excerpt: ""
+intro: ""
+description: "Some tricks I've found useful for GitHub Actions"
 tags: "gh-pages, github pages, github, gh-actions, github actions"
+date: "2022-10-08"
 ---
 
-## Checking out Multiple Repos
+### Checking out Multiple Repos
 
 You can check out multiple repos in your action, this is useful when you want to have something like content in one repository and templates in another repository.
 

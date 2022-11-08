@@ -1,10 +1,12 @@
 ---
 title:  "Kubernetes Notes"
-excerpt: "Common kubernetes terms and commands used in the CLI."
-tags: "kubernetes"
+intro: "Common kubernetes terms and commands used in the CLI."
+description: "Common kubernetes terms and commands used in the CLI."
+tags: "kubernetes, cli"
+date: "2021-07-02"
 ---
 
-## Namespaces
+### Namespaces
 
 > "An abstraction used by Kubernetes to support multiple virtual clusters on the same physical cluster."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?fundamental=true)*
@@ -16,7 +18,7 @@ tags: "kubernetes"
 | Describe Namespace: | ``` kubectl describe ns <namespace> ``` | ``` kubectl describe ns kube-system ``` |
 | Change Namespace you're working on: | ``` kubectl config set-context --current --namespace=<namespace> ``` | ``` kubectl config set-context --current --namespace=kube-system ``` |
 
-## Services
+### Services
 
 > "An abstract way to expose an application running on a set of Pods as a network service."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?fundamental=true)*
@@ -26,7 +28,7 @@ tags: "kubernetes"
 |-|-|-|
 | List Services: | ``` kubectl get services -n <namespace> ``` | ``` kubectl get services -n kube-system ``` |
 
-## Pods
+### Pods
 
 > "The smallest and simplest Kubernetes object. A Pod represents a set of running containers on your cluster."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?fundamental=true)*
@@ -48,7 +50,7 @@ tags: "kubernetes"
 | Get Logs | ``` kubectl logs <podname>  ``` | ``` kubectl logs kube-proxy ``` |
 | | ``` kubectl logs --tail=<lines> <podname> ``` | ``` kubectl logs --tail=20 nginx ``` |
 
-## Containers
+### Containers
 
 > "A lightweight and portable executable image that contains software and all of its dependencies."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?fundamental=true)*
@@ -56,10 +58,8 @@ tags: "kubernetes"
 | To | Command | Example |
 |-|-|-|
 | List Containers in a Pod: | ```kubectl get pod <podname> -o jsonpath='{.spec.containers[*].name}{"\n"}'``` | ```kubectl get pod kube-proxy -o jsonpath='{.spec.containers[*].name}{"\n"}' ```|
-| | ```  ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
 
-## Deployments
+### Deployments
 
 > "An API object that manages a replicated application, typically by running Pods with no local state."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?fundamental=true)*
@@ -67,10 +67,8 @@ tags: "kubernetes"
 | To | Command | Example |
 |-|-|-|
 | List Deployments: | ``` kubectl get deployments -n <namespace> ``` | ``` kubectl get deployments -n kube-system ``` |
-| | ```   ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
 
-## Nodes
+### Nodes
 
 > Node: A worker machine, either virtual or physical machine.
 
@@ -79,11 +77,8 @@ tags: "kubernetes"
 | List Nodes: | ```kubectl get node``` | ```kubectl get node``` |
 | Describe Node: | ``` kubectl describe node <nodename> ``` | ```  ``` |
 | Get External IP's of all Nodes: | ``` kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}' ``` | ``` kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="ExternalIP")].address}' ``` |
-| | ```  ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
 
-## Persistent Volumes
+### Persistent Volumes
 
 > "An API object that represents a piece of storage in the cluster. Available as a general, pluggable resource that persists beyond the lifecycle of any individual Pod."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?core-object=true)*
@@ -91,10 +86,8 @@ tags: "kubernetes"
 | To | Command | Example |
 |-|-|-|
 | List Persistent Volumes: | ```kubectl get pv``` | ```kubectl get pv``` |
-| | ```  ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
 
-## ConfigMaps
+### ConfigMaps
 
 > "An API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume."  
 \- *[kubernetes.io/docs/reference/glossary/](https://kubernetes.io/docs/reference/glossary/?core-object=true)*
@@ -108,12 +101,9 @@ tags: "kubernetes"
 | Create ConfigMap from file: | ``` kubectl create configmap <configmapname> –from-file=<file> ``` | ```  kubectl create configmap myconfigmap --from-file=path/file.name ``` |
 | Create ConfigMap from directory: | ``` kubectl create configmap <configmapname> –from-file=<directory> ``` | ``` kubectl create configmap myconfigmap --from-file=mydirectorypath ``` |
 | Create ConfigMap from literals: | ``` kubectl create configmap <configmapname> –from-literal=<key>=<value> –from-literal=<key>=<value> ``` | ``` kubectl create configmap myconfigmap --from-literal=admin=root --from-literal=stage.user=frank.grimes ``` |
-| | ```  ``` | ```  ``` |
-| | ```  ``` | ```  ``` |
 
-kubectl proxy
 
-# References
+### References
 
 - [kubernetes.io](https://kubernetes.io)
     - [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

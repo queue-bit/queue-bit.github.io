@@ -1,7 +1,9 @@
 ---
 title:  "Gnome Seahorse"
-excerpt: "You can use Gnome's Seahorse (Passwords and Keys) to handle SSH keys, this is particularly useful when working with GitHub."
-tags: "gnome seahorse ssh keys github"
+intro: "You can use Gnome's Seahorse (Passwords and Keys) to handle SSH keys, this is particularly useful when working with GitHub."
+description: "Using Gnome's Seahorse (Passwords and Keys) to handle SSH keys."
+tags: "gnome,seahorse,ssh,keys,github,passwords,keys"
+date: "2020-05-29"
 ---
 
 1. Open `Password and Keys` (this app is known as [_Seahorse_](https://wiki.gnome.org/Apps/Seahorse/))

@@ -1,12 +1,16 @@
 ---
 title:  "Lean Canvas"
-excerpt: "Lean Canvas Template"
-tags: "product management, business analysis, business modelling"
+intro: "Here's the Lean Canvas Template I use."
+description: "My template for creating a Lean Canvas."
+tags: "product management, business analysis, business modelling, lean canvas, lean"
+date: "2022-08-09"
 ---
 
-## Lean Canvas Template
+### Lean Canvas
 
 ![Lean Canvas](/media/lean-canvas.png) 
+
+#### How to fill it out
 
 | Fields | Description |
 |-|-|
@@ -20,7 +24,7 @@ tags: "product management, business analysis, business modelling"
 | Cost Structure | All costs needed to build and sell the product, things like salaries, fees, hardware, etc. |
 | Revenue Streams | How do we collect money? What will customers be willing to pay? |
 
-### Downloads
+#### Downloads
 
 - [PDF](/media/lean-canvas.pdf) 
 - [ODT](/media/lean-canvas.odt) (LibreOffice Writer, Microsoft Word, Google Docs)

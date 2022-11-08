@@ -1,12 +1,14 @@
 ---
 title:  "NodeMCU ESP8266 12-E"
-excerpt: "Arduino-like IoT development using an ESP8266."
-tags: "arduino nodemcu esp8266 iot 12-e"
+intro: "Arduino-like IoT development using an ESP8266."
+description: "IoT development using the ESP8266."
+tags: "arduino,nodemcu,esp8266,iot 12-e"
+date: "2020-12-29"
 ---
 
 While not strictly an arduino, these development boards operate and are used very similarly.
 
-## Brief overview of the NodeMCU ESP8266
+### Brief overview of the NodeMCU ESP8266
 
 Let's unpack that name before anything else:
 1. NodeMCU - an open-source firmware written in [Lua](https://www.lua.org/about.html) for the ESP8266.
@@ -16,7 +18,7 @@ The term _NodeMCU ESP8266_ is often used to refer to the development boards and 
 
 ![Amica NodeMCU ESP8266](/media/nodemcu-esp8266-amica.jpg)
 
-### Pins
+#### Pins
 
 Looking at the top of the board with the USB port pointing down:
 
@@ -38,13 +40,13 @@ Looking at the top of the board with the USB port pointing down:
 |*Ground*|**GND**||**GND**|*Ground*|
 |*VIN 5 Volt*|**VIN**||**3V3**|*3.3 Volt*|
 
-#### Available GPIO Pins
+##### Available GPIO Pins
 
 The NodeMCU ESP8266 12-E has thirteen (13) General Purpose Input/Output (GPIO) pins exposed on the board, however not all of these pins are suggested for use.
 
 Refer to [https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/](https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/) for a great write-up on the pins.
 
-##### Safely usable GPIO Pins
+###### Safely usable GPIO Pins
 
 Some of the GPIO pins have multiple uses or can have unexpected behaviour at boot, the following pins are generally considered safe for both Input and Output:
 - D1 (GPIO5)
@@ -54,26 +56,26 @@ Some of the GPIO pins have multiple uses or can have unexpected behaviour at boo
 - D7 (GPIO13)
 
 
-#### Analog Pins
+##### Analog Pins
 
 The NodeMCU has one (1) Analog pin available (A0/ADC0).
 
-### Sensors
+#### Sensors
 
 Arduino sensors can be used.
 
 If the sensor requires 5v of power you can use the VIN pin to power it but you will need to use a voltage divider if the sensor returns more than 3.3v to prevent frying your board.
 
 
-## Development Tools
+### Development Tools
 
-### Arduino IDE
+#### Arduino IDE
 
 Good step-by-step guide to installing the Arduino IDE and the ESP8266 modules: [https://microcontrollerslab.com/how-to-install-esp8266-board-arduino-ide/](https://microcontrollerslab.com/how-to-install-esp8266-board-arduino-ide/)
 
 If you're looking for custom logic or just want to write the code yourself the arduino IDE is solid and works well with the ESP8266.
 
-### Tasmotizer
+#### Tasmotizer
 
 I'm a big fan of [Tasmotizer](https://github.com/tasmota/tasmotizer) for quickly configuring the ESP8266 boards for use with [MQTT](https://mqtt.org/). 
 

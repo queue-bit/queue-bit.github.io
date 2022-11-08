@@ -1,16 +1,18 @@
 ---
 title:  "SWOT Analysis"
-excerpt: ""
+intro: ""
+description: "SWOT analysis are useful for assessing internal and external factors that impact your product."
 tags: "product management, business analysis, SWOT"
+date: "2022-08-14"
 ---
 
-## Overview
+### Overview
 
 Strengths, Weaknesses, Opportunities, and Threats (SWOT) analysis, where Strengths and Weaknesses assess the internal factors and Opportunities and Threats assess the external factors.
 
 SWOT analysis are best done in a group as they can spark needed discussion and keep everyone on the same page.
 
-### As Four Quadrants
+#### As Four Quadrants
 
 |SWOT Analysis|||
 |:-|:-:|:-|
@@ -25,7 +27,7 @@ SWOT analysis are best done in a group as they can spark needed discussion and k
 
 ---
 
-### As Two Columns
+#### As Two Columns
 
 |SWOT Analysis||
 |:-|:-|
@@ -44,7 +46,7 @@ SWOT analysis are best done in a group as they can spark needed discussion and k
 
 ---
 
-### With Competitor SWOT
+#### With Competitor SWOT
 
 Don't be limited to creating a SWOT analysis just for your product, try creating them for your competitors.
 

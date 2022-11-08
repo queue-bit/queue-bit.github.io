@@ -1,10 +1,12 @@
 ---
 title:  "CLI Jobs & Processes"
-excerpt: "Some CLI commands for moving processes into the background and back to foreground."
-tags: "linux shell bash zsh sh rbash dash jobs suspend bg fg"
+intro: "Some CLI commands for moving processes into the background and back to foreground."
+description: "How to move processes to background and back to foreground in the CLI."
+tags: "linux,shell,bash,zsh,sh,rbash,dash,jobs,suspend,bg,fg,cli"
+date: "2021-01-30"
 ---
 
-## Jobs & Processes
+### Jobs & Processes
 
 | To | Command |
 |-|-|
@@ -15,7 +17,7 @@ tags: "linux shell bash zsh sh rbash dash jobs suspend bg fg"
 | [Send process to background](#send-process-to-background) | `bg %{job-id}` |
 | [Suspend a background process](#suspend-a-background-process) | `kill -STOP %{job-id}` |
 
-### List Jobs
+#### List Jobs
 
 ```bash
 ~ jobs
@@ -25,14 +27,14 @@ tags: "linux shell bash zsh sh rbash dash jobs suspend bg fg"
 [1]  + 36448 running    bundle exec jekyll serve
 ```
 
-### Resume Last Suspended Process
+#### Resume Last Suspended Process
 
 ```bash
 ~ fg
 [1]  + running    bundle exec jekyll serve
 ```
 
-### Resume a Specific Suspended Process
+#### Resume a Specific Suspended Process
 
 ```bash
 ~ jobs
@@ -45,7 +47,7 @@ tags: "linux shell bash zsh sh rbash dash jobs suspend bg fg"
                     _linux/2021-01-30-cli-commands.md
 ```
 
-### Send Process to Background
+#### Send Process to Background
 
 ```bash
 ~ bundle exec jekyll serve
@@ -67,7 +69,7 @@ zsh: suspended  bundle exec jekyll serve
 ~
 ```
 
-### Suspend a Background Process
+#### Suspend a Background Process
 
 ```bash
 ~ jobs

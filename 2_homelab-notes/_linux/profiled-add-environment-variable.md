@@ -1,17 +1,18 @@
 ---
-
 title:  "Setting Environment Vars"
-excerpt: "Using profile.d for loading environment variables"
-tags: "ubuntu environment variables profile.d"
+intro: "Using profile.d for loading environment variables"
+description: "Setting environment variables using profile.d"
+tags: "ubuntu,environment variables,profile.d"
+date: "2020-05-29"
 ---
 
-I typically use profile.d for loading Environment Variables. There are other methods but I find this easier to maintain.
+I typically use profile.d for loading Environment Variables, there are other methods but I find this easier to maintain.
 
-## Steps
+### Steps
 
 1. Use `echo` to output the `export` command, then redirect (`>>`) the output to a file in the `profile.d` directory:
 
-    ```zsh
+    ```bash
     sudo sh -c 'echo "export {YOUR_VARIABLE_NAME}={your-variable-value}" >>  /etc/profile.d/{your-variable-name}.sh'
     ```   
 
@@ -28,28 +29,28 @@ I typically use profile.d for loading Environment Variables. There are other met
 
 1. Use `chmod +x` to mark the new file as executable:
 
-    ```zsh
+    ```bash
     ~ chmod +x /etc/profile.d/{your-variable-name}.sh
     ```
 
 1. Use `source` to load the `/etc/profile.d/{your-variable-name}.sh` file into the current shell (this saves us from having to logout and back in):
 
-    ```zsh
+    ```bash
     ~ source /etc/profile.d/{your-variable-name}.sh 
     ```
 
 1. Test that the variable is loaded by echoing it:
 
-    ```zsh
+    ```bash
     ~ echo ${YOUR_VARIABLE_NAME}
     ```
     - You'll get a reply of {your-variable-value}
 
-## Example
+### Example
 
 In this example I create a new shell file in profile.d that exports an Environment Variable with the name `TEST_API_KEY` and value `mykeyishere`. I then make it executable, use `source` to load it, then `echo` it to make sure it's properly set.
 
-```zsh
+```bash
 ~ sudo sh -c 'echo "export TEST_API_KEY=mykeyishere" >>  /etc/profile.d/test-key.sh' 
 [sudo] password for user: _
 ~ sudo chmod +x /etc/profile.d/test-key.sh 

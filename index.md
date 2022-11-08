@@ -1,6 +1,9 @@
 ---
 title:  "About"
-excerpt: "Technologist and Technology Leader in Winnipeg, MB."
+intro: "Technologist and Technology Leader in Winnipeg, MB."
+description: "Technologist and Technology Leader in Winnipeg, MB."
+date: "2022-11-04"
+ogtype: "website"
 ---
 <div class="row">
     <div class="col-3 col-12-small"><img style="border-radius: 25px;" src = "/media/avatar.jpg" /></div>
