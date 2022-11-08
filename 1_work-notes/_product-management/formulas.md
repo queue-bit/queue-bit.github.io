@@ -1,12 +1,14 @@
 ---
 title:  "Formulas & Metrics"
-excerpt: "A non-exhaustive list of formulas and metrics for Product Management."
+intro: "A non-exhaustive list of formulas and metrics for Product Management."
+description: "A non-exhaustive list of formulas and metrics for Product Management."
 tags: "product management, formulas, calculations, metrics"
+date: "2021-12-06"
 ---
 
-## AARRR: Startup Metrics for Pirates (Dave McClure)
+### AARRR: Startup Metrics for Pirates (Dave McClure)
 
-### Aquisition 
+#### Aquisition 
 
 Getting people to your product, simple metrics:
 
@@ -19,7 +21,7 @@ Should include ROI:
 
 - *CAC*: Customer Aquisition Cost (Cost of sales and marketing / new customers), could be argued this belongs in [Activation](#activation) or [Revenue](#revenue)
 
-### Activation  
+#### Activation  
 
 The people you converted to users, at the basic level, the **Conversion Rate**. 
 
@@ -28,7 +30,7 @@ Out of all the people who landed on your website:
 - The number of people who converted to users (signups/visits)
 - The number of people who completed onboarding (onboarded/visits)
 
-### Retention 
+#### Retention 
 
 Engagement Metrics, Customer Usage
 
@@ -46,13 +48,13 @@ Other retention metrics:
 - *% of users who visit X times a month*
 - *Stickiness*: Average number of days monthly active users use the product (DAU/MAU), the higher the better
 
-### Referral  
+#### Referral  
 
 - *NPS*: Net Promoter Score, the percent of promoters minus the percent of detractors in a survey of all or some users on how likely they are to recommend your product on a scale of 1-10. People who rank 0-6 are detractors, 7-8 are passives, 9-10 are promoters.
 - *K*: Viral Coefficient, the number of new users an average user generates. The avg number of invites sent multiplied by invitation acceptance rate, the higher the better.
 - *VCT*: Viral Cycle Time, how fast new users invite friends.
 
-### Revenue  
+#### Revenue  
 
 - *CPM*: Cost per mille, earnings per 1000 ad impressions or views
 - *AOV*: Average Order Value or Cart Size, the average price per purchase
@@ -61,7 +63,7 @@ Other retention metrics:
 - *GPM*: Gross Profit Margin = (Net sales – COGS) / Net sales x 100% 
 
 
-### Handy Table for AARRR
+#### Handy Table for AARRR
 
 | |Goals|Signals|Metrics|
 |-|-|-|-|
@@ -72,7 +74,7 @@ Other retention metrics:
 | Referral | | | |
 | Revenue | | | |
 
-## Others
+### Others
 
 - *Market Share*: How you're doing vs. competitors
   - By revenue: The revenue of your product against the revenue of all competing products
@@ -81,7 +83,7 @@ Other retention metrics:
 
 
 
-## References & Reading Material
+### References & Reading Material
 
 1. [Book: Product Management's Sacred Seven](https://pmsacredseven.com/) - Highly Recommended!
 1. [Book: Product Manager's Survival Guide, 2nd edition](https://www.oreilly.com/library/view/the-product-managers/9781260135244/)

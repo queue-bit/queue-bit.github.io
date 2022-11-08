@@ -1,16 +1,18 @@
 ---
 title:  "Model Ticket Flows"
-excerpt: "Modelling ticket flows tips & tricks"
-tags: "process engineering, ticket flows"
+intro: "Modelling ticket flows tips & tricks."
+description: "Modelling ticket flows tips and tricks."
+tags: "process engineering, ticket flows, tips"
+date: "2022-10-10"
 ---
 
-## Modeling Ticket Flows With Diagrams
+### Modeling Ticket Flows With Diagrams
 
 Not all processes use tickets, but for those that do it is helpful to model them out in diagrams to gain additional insight and consensus on where improvements can/need to be made. I've additionally found it helpful for readers to include ticket flow diagrams within procedure documentation.
 
 I'm using a fairly simple example here to show the diagrams and how they might be used, I'm intentionally not diving into how the example process can be improved.
 
-### State Diagrams
+#### State Diagrams
 
 I've discussed [State Diagrams for ticket flows before](state-diagrams.md), where I landed on this diagram to illustrate a simple ticket flow a Service Desk might use:
 
@@ -27,7 +29,7 @@ stateDiagram-v2
     Done --> [*] : Issue Closed
 ```
 
-### Class Diagrams
+#### Class Diagrams
 
 We can build on our State Diagram by **misusing** a Class Diagrams, the structure of the diagram lends itself to illustrating additional information like Inputs, Outputs, and sub-processes.
 
@@ -79,7 +81,7 @@ classDiagram
     Paused --> ToDo: Needs Re-assignment
 ```
 
-### Sequence Diagram
+#### Sequence Diagram
 
 Mapping as a Sequence Diagram can also be helpful. 
 
@@ -119,7 +121,7 @@ actor SDMember
 
 ```
 
-### User Journey
+#### User Journey
 
 Taking a page out of Product Management, it can be helpful to map the User Journey for ticket flows. 
 

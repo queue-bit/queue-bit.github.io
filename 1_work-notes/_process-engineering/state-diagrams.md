@@ -1,18 +1,20 @@
 ---
 title:  "State Diagrams"
-excerpt: "Showing and Analyzing Process Flows with State Diagrams"
-tags: "process engineering"
+intro: "Showing and Analyzing Process Flows with State Diagrams."
+description: "Showing and Analyzing Process Flows with State Diagrams."
+tags: "process engineering,tickets,flows,workflow"
+date: "2022-10-08"
 ---
 
 
-## State Diagrams
+### State Diagrams
 
 You can think of processes as a collection of states and transitions, this makes it easy to create State diagrams to model and show the process or workflow.
 
 _Note: For this example we'll go bottom-up, starting with the ticket flow and moving up from there to fill in some gaps, but we'll stop short of more in-depth analysis and diagramming tools._
 
 
-### Investigation & Analysis
+#### Investigation & Analysis
 
 In our fictional company, _YesButNo Inc._, issues sent over to the Service Desk are ticketed and run through a defined workflow until they are completed, we've been asked to take a look at and document the process.
 
@@ -85,7 +87,7 @@ Done --> [*] : Issue Closed
 
 We also discuss with management the need to monitor and report on all statuses, it's vital for them to know if tickets are remaining in `Paused` for several days because the team isn't getting responses as this will hurt team morale and must be dealt with at an organizational level.
 
-### Wrapping up
+#### Wrapping up
 
 While fictional, I want to point out that this type of thing isn't a failure of a person or team, constraints and pressure have a way of creating process work-arounds. It's managements responsibility to ensure that their teams have the necessary bandwidth to complete the tasks, and teams must be able and willing to speak up. It is better for everyone to know that you're missing targets, sweeping them under the rug will only add stress and exacerbate the problems over time.
 

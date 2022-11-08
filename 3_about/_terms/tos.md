@@ -1,7 +1,9 @@
 ---
 title:  "License and Terms of Service"
-excerpt: ""
-tags: "tos license"
+intro: ""
+description: "The Terms of Service and License for this site and its contents."
+tags: "tos,license"
+date: "2022-10-25"
 ---
 
 The content on this website is licensed under Creative Commons Attribution 4.0 International, you can read the [license here](https://github.com/queue-bit/queue-bit.github.io/blob/main/LICENSE)

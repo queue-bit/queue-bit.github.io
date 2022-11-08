@@ -1,21 +1,23 @@
 ---
 title:  "K8s Bare Metal On Debian"
-excerpt: "Setting up Debian on Bare Metal for Kubernetes."
-tags: "kubernetes, bare metal, k8s"
+intro: "Setting up Debian on Bare Metal for Kubernetes."
+description: "How I setup Debian on Bare Metal hardware for Kubernetes."
+tags: "kubernetes, bare metal, k8s, debian"
+date: "2021-07-04"
 ---
 
-## Adjust BIOS settings
+### Adjust BIOS settings
 
 1. Turn off powersaving features
 1. Allow boot from USB
 1. etc.
 
-## Install Debian
+### Install Debian
 
 1. Text-based install
 1. Deselect Gnome, don't need it 
 
-## Debian Config
+### Debian Config
 
 1. Add user to sudoers:
     ```bash
@@ -46,7 +48,7 @@ tags: "kubernetes, bare metal, k8s"
     % sudo systemctl reboot
     ```
 
-## Load br_netfilter
+### Load br_netfilter
 
 ```bash
 % sudo modprobe br_netfilter
@@ -68,7 +70,7 @@ EOF
 % sudo sysctl --system
 ```
 
-## Install containerd 
+### Install containerd 
 
 It's preferred to use containerd instead of a full Docker install.
 
@@ -105,7 +107,7 @@ It's preferred to use containerd instead of a full Docker install.
 % exit
 ```
 
-## Install Kubernetes
+### Install Kubernetes
 
 1. Install Kubernetes
     ```bash
@@ -158,6 +160,6 @@ It's preferred to use containerd instead of a full Docker install.
     % kubeadm join <ip/host given>:6443 --token <token given>  --discovery-token-ca-cert-hash <hash given> 
     ```
 
-## Install a load balancer
+### Install a load balancer
 
 1. For metallb, see: [this youtube video](https://www.youtube.com/watch?v=xYiYIjlAgHY)

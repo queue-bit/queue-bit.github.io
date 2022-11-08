@@ -1,10 +1,12 @@
 ---
 title:  "Github Pages Tricks"
-excerpt: ""
+intro: ""
+description: "Some tricks for working with GitHub Pages"
 tags: "gh-pages, github pages, github"
+date: "2022-10-08"
 ---
 
-## Multiple Repos with Github Pages
+### Multiple Repos with Github Pages
 
 If you have Github Pages set up with a domain (on your repo `/user/user.github.io/`) and you create another repository with pages, the second repository will be available as a path on the original domain.
 
