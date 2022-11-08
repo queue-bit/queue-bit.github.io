@@ -2,10 +2,12 @@ title:        Andreas Wiebe
 domain:       www.andreaswiebe.com
 baseurl:      https://www.andreaswiebe.com
 templatename: txt
-email:        contact@andreaswiebe.com
+email:        no@andreaswiebe.com
 github:       https://github.com/queue-bit
 linkedin:     https://www.linkedin.com/in/andreasfwiebe
 twitter:      https://twitter.com/AndreasWiebe
 analytics:    <!-- I don't use analytics on this site. -->
 ogtype:       article
 author:       Andreas Wiebe
+ogimage:      1.jpeg
+faviconpath:  /media/favicon
