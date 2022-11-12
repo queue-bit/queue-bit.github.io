@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /submitted.html
+
+Sitemap: https://www.andreaswiebe.com/sitemap.xml
