@@ -461,3 +461,64 @@ Anyone switching from V1.0.0 will need to update their frontmatter and config fi
 - Added support for favicons
 - Tweaked to check if optional vars exist before rendering html
 - Added `prism` css and js for nicer code-block formatting
+
+<br/><br/><br/>
+
+---
+
+### Changes v2.1.0
+
+Minor revision with some added functionality, this should not impact any existing v2.0.0 integrations.
+
+#### Component 1: The Go Program
+
+##### Features
+
+###### Sitemap
+
+Now automatically creates a sitemap.xml file in the root.
+
+Page **priority** and **change frequency** are hardcoded and set as follows:
+
+|Page|Priority|Change Frequency|
+|-|-|-|
+|Article|0.5|monthly|
+|Section|1|weekly|
+|Category|0.8|weekly|
+
+In the future I'll likely put in an override in frontmatter for these values.
+
+###### Redirects
+
+Since GitHub doesn't support `.htaccess` files I've added a simple redirect feature using the `http-equiv="refresh"` metatag. Unfortunately this isn't a good solution for SEO but it seems to be the only option with GitHub Pages.
+
+To use this feature, create a new file `/content/.config/redirects.yaml` with the following format:
+ 
+```yaml
+redirect:
+  - from: "/about/about-me/"
+    to: "/about"
+  - from: "/about/about-site/"
+    to: "/about"
+```
+*Note: If you have no redirects, don't create this file.*
+
+This feature currently only supports pretty-url types:
+  - redirecting from `http://1222223.com/my-page/` works 
+  - redirecting from `http://1222223.com/my-page/random.html` does not work
+
+
+##### Code Changes
+
+Cleaned up a lot of stuff, including:
+
+- Metadata, including paths and sitemaps are now global variables instead of being passed from function to function 
+  - Eliminates calling a function with file loading multiple times
+  - Simplifies function calls
+- Changed console output to log output
+
+
+#### Component 3: The Template
+
+- Bugfix for breadcrumb nav not showing on section and category pages [Issue](https://github.com/queue-bit/template-txt/issues/5)
+- Added `og:site_name` meta tag
