@@ -4,15 +4,16 @@ intro: "I created a set of Ruby libraries to convert markdown to Confluence and 
 description: "A set of Ruby libraries to convert markdown to Confluence and upload it."
 tags: "ruby, markdown, confluence, atlassian"
 date: "2022-11-05"
+updated: "2022-11-17"
 ---
 
 ### Requirements
 
-#### Purpose
+**Purpose**
 
 I need to be able to convert GitHub Flavoured Markdown to Confluence markup and automatically upload it to Atlassian Confluence, every opensource tool I've tested for this breaks with mixed nested lists.
 
-##### Intro
+**Intro**
 |||
 |-|-|
 | **For** | Myself |
@@ -22,47 +23,44 @@ I need to be able to convert GitHub Flavoured Markdown to Confluence markup and 
 | **Unlike**| Most existing opensource solutions|
 | **This Product** |handles mixed nested lists without breaking.|
 
-##### Who is it for?
+**Who is it for?**
 
 *md2confluence* is primarily for myself as I prefer writing in markdown than wysiwyg editors or Confluence markup.
 
-###### Background
+**Background**
 
 I needed to upload a mass of markdown files to Confluence but every tool I tested would break with my mixed nested lists (ordered within unordered, etc) so I set to build it for myself.
 
-###### Market Assumptions
+**Market Assumptions**
 
 - I will be the only person using *md2confluence*.
 
-###### Market Opportunities
+**Market Opportunities**
 
 - Not applicable as this is a personal project.
 
-###### Goals
+**Goals**
 
 - Create a markdown to Confluence converter
 - Use the Confluence API to upload the content
 - Keep the content file/path structure from the markdown files when creating pages on Confluence
 
-#### Features / Functionality
+**Features / Functionality**
 
-##### Core Elements
+- Core Elements
+  - Library:
+    - Convert markdown to Confluence markup
+      - Must support uploading images as attachments and having them show in the Confluence page appropriately
+    - Confluence API
+  - Examples:
+    - Convert single page
+    - Convert directory tree
+    - Delete directory tree from Confluence
+- Look and Feel
+  - *md2confluence* should be a set of two libraries, one to handle the markdown conversion and the other to handle the Confluence API.
+  - These libraries can be included in other projects or can be wrapped with a simple program to convert one or many files.
 
-- Library:
-  - Convert markdown to Confluence markup
-    - Must support uploading images as attachments and having them show in the Confluence page appropriately
-  - Confluence API
-- Examples:
-  - Convert single page
-  - Convert directory tree
-  - Delete directory tree from Confluence
-
-
-##### Look and Feel
-
-*md2confluence* should be a set of two libraries, one to handle the markdown conversion and the other to handle the Confluence API. These libraries can be included in other projects or can be wrapped with a simple program to convert one or many files.
-
-#### Release Criteria
+**Release Criteria**
 
 - Library can convert markdown test corpus to Confluence markup
 - Library can connect to Confluence, upload, and delete pages
@@ -72,14 +70,14 @@ I needed to upload a mass of markdown files to Confluence but every tool I teste
   - Delete a tree of pages from Confluence
 
 
-#### Timeline & Constraints
+**Timeline & Constraints**
 
 - No budget or dependencies, I am the only resource.
 - Can only be worked on over weekends and when time allows
 
 ---
 
-### The Solution
+### Current Release Details
 
 The repo: [md2confluence](https://github.com/queue-bit/md2confluence)
 
