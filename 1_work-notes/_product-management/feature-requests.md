@@ -1,36 +1,37 @@
 ---
 title: "Feature Requests"
 intro: ""
-description: ""
+description: "Handling Feature Requests"
 tags: "product management, business analysis, business modelling, backlog, feature request, project request"
 date: "2022-11-20"
+updated: "2022-11-26"
 ---
 
 ### Feature Requests
 
 Product Managers and Product Owners are often overloaded with feedback and off-the-cuff requests for new features from stakeholders and users. This can become distracting, and worse, can lead to stakeholders and users feeling unheard if they never hear follow-up on something they requested. 
 
-#### Feature Request Document (FRD)
+#### Feature Request Document
 
-A good way to solve feature request overload from users is to use a standardized Feature Request Document, preferably a form that can be filled out and submitted online. 
+A good way to solve feature request overload from users is to use a standardized feature request document/form, preferably a form that can be filled out and submitted online. 
 
 If a feature request is made during a user or stakeholder interview, you should complete the form on their behalf, making sure to include them as the reporter so they receive any follow-up updates or questions. 
 
-Ensure the user/stakeholder facing part of your FRD is simple and easily filled-out, you want them to complete and submit it, not add barriers to idea generation. In my experience, things like market-fit, revenue potential, OKR/KPI, project vs. feature, and vetting demand are better answered by the product team (yes, you will need to do work on every feature request).
+Ensure the user/stakeholder facing part of your feature request document is simple and easily filled-out, you want them to complete and submit it, not add barriers to idea generation. In my experience, things like market-fit, revenue potential, OKR/KPI, project vs. feature, and vetting demand are better answered by the product team (yes, you will need to do work on every feature request).
 
 Rules I live by:
 
-- **Do not** use a FRD to "gatekeep" submissions
+- **Do not** use a feature request document to "gatekeep" submissions
   - Keep them short and easy to fill out
   - Don't load it with Product specific jargon (eg. stay away from OKR's, KPI's, Lean Canvas)
-- **Do** take a submitted FRD and do analysis
-  - Consider the FRD a hypothesis, you need to vet it
+- **Do** take a submitted feature requests and do analysis
+  - Consider the feature request a hypothesis, you need to vet it
 - **Do** let the stakeholder know the status
   - Is the feature being put into the backlog or roadmap? Tell them, and give them an indication as to its priority.
   - Is the feature not being pursued? Give them insight into why, you need to build trust and understanding.
 
 
-##### FRD Template
+##### Template
 
 Keeping this simple, you'll want to collect
 

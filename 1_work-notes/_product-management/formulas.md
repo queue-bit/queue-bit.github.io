@@ -4,6 +4,7 @@ intro: "A non-exhaustive list of formulas and metrics for Product Management."
 description: "A non-exhaustive list of formulas and metrics for Product Management."
 tags: "product management, formulas, calculations, metrics"
 date: "2021-12-06"
+updated: "2022-11-26"
 ---
 
 ### AARRR: Startup Metrics for Pirates (Dave McClure)
@@ -73,6 +74,27 @@ Other retention metrics:
 | Retention | | | |
 | Referral | | | |
 | Revenue | | | |
+
+### Conversion Funnel
+
+Think of a funnel (large at top, small at bottom), as users research a solution they start at the top and as they learn more they move down the funnel until they ultimately take action (like a purchase). The funnel is normally broken down into four levels, something to the effect of:
+
+1. Awareness
+2. Interest
+3. Desire
+4. Action
+
+Typically you want to measure how many users you lose at each step, then target those areas for improvement/optimization (this might be through SEM/SEO, UX improvements, etc).
+
+### Google's Heart Framework
+
+Intended for large-scale products.
+
+- **H**appiness: User Satisfaction, measured by surveys
+- **E**ngagement: Measurable Engagement, measured by things like: frequency, clicks, time spent
+- **A**doption: How good you are at attracting new users, measured by new users over time period
+- **R**etention: Inverse of Churn Rate, measured by things like: rate of users returning, rate of users staying
+- **T**ask Success: Technical metrics, measure by things like: time to load a page, time to checkout, etc.
 
 ### Others
 
