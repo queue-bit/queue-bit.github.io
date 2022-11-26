@@ -14,6 +14,7 @@ Current reading list (all links go to publishers website):
   - [Product Management's Sacred Seven](https://pmsacredseven.com/) (ISBN: `9780578740584`)
   - [The Product Manager's Survival Guide](https://www.mhprofessional.com/the-product-manager-s-survival-guide-second-edition-everything-you-need-to-know-to-succeed-as-a-9781260135237-usa) (ISBN: `9781260135237`)
   - [Continuous Discovery Habits](https://www.producttalk.org/) (ISBN: `9781736633304`)
+  - [Product Direction](https://productdirection.co/book/) (ISBN: `9781736824719`)
 - Related (Lean, DevOps)
   - [The Phoenix Project](https://itrevolution.com/product/the-phoenix-project/) (ISBN: `9781942788294`)
   - [The Unicorn Project](https://itrevolution.com/product/the-unicorn-project/) (ISBN: `9781942788768`)
