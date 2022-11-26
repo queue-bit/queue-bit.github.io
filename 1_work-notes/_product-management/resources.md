@@ -4,6 +4,7 @@ intro: "Some books and online resources I've found helpful"
 description: "Some books and online resources I've found helpful for Product Management"
 tags: "product management,books"
 date: "2022-11-17"
+updated: "2022-11-26"
 ---
 
 ### My Reading List

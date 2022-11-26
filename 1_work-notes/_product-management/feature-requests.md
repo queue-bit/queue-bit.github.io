@@ -1,9 +1,10 @@
 ---
 title: "Feature Requests"
 intro: ""
-description: ""
+description: "Handling Feature Requests"
 tags: "product management, business analysis, business modelling, backlog, feature request, project request"
 date: "2022-11-20"
+updated: "2022-11-26"
 ---
 
 ### Feature Requests
