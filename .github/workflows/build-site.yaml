@@ -13,6 +13,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 # Allow one concurrent deployment
 concurrency:
@@ -32,33 +33,33 @@ jobs:
       working-directory: ./
     steps:
       - name: Set up Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with:
           go-version: 1.18    
       - name: Checkout queue-bit/go-pubsite
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: queue-bit/go-pubsite
           path: './'
       - name: Checkout queue-bit/template-txt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: queue-bit/template-txt
           path: './templates/txt'          
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: './content'
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
       - name: Build
         run: |
           pwd
           ls ./content
           go run main.go
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
@@ -72,4 +73,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
