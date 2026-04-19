@@ -8,7 +8,7 @@ date: "2026-04-19"
 
 ### Run local models in Claude Code
 
-Ollama allows you to install and run Claude Code but you will liekly need to have a larger context window than Ollama will give it by default on most hosts.
+Ollama allows you to install and run Claude Code but you will likely need to have a larger context window than Ollama will give it by default on most hosts.
 
 Ollama conservatively sets default context window size depending on the amount of VRAM you have, as an example, if you have 48 GiB of VRAM it gives you a 32k context window.
 
