@@ -2,7 +2,7 @@
 title:  "About"
 intro: "Technologist and Technology Leader in Winnipeg, MB."
 description: "Technologist and Technology Leader in Winnipeg, MB."
-date: "2022-11-04"
+date: "2026-04-19"
 ogtype: "website"
 ---
 <div class="row">
