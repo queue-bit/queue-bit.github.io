@@ -37,17 +37,17 @@ jobs:
         with:
           go-version: 1.18    
       - name: Checkout queue-bit/go-pubsite
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           repository: queue-bit/go-pubsite
           path: './'
       - name: Checkout queue-bit/template-txt
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           repository: queue-bit/template-txt
           path: './templates/txt'          
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           path: './content'
       - name: Setup Pages
